@@ -1,0 +1,5 @@
+.env
+*.log
+projects/*/build/
+node_modules/
+.DS_Store
