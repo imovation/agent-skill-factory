@@ -27,7 +27,12 @@ GITHUB_USER=你的GitHub用户名
     ./core/deploy.sh <项目名>
     ```
 
-## 5. 最佳实践 (Best Practices)
+## 5. IDE 辅助工具 (IDE Utilities)
+工厂提供了一套 CLI 辅助工具来提升开发体验：
+- **预览成品**：`./core/preview.sh <项目名>` (构建并查看最终输出)。
+- **质量检查**：`./core/lint.sh <项目名>` (验证是否符合铁律)。
+
+## 6. 最佳实践 (Best Practices)
 - **禁止瞎猜**：若不确定用户意图，请务必先请求明确。
 - **自包含校验**：生成 `SKILL.md` 后，建议用 `cat` 命令检查脚本注入内容是否正确。
 - **双仓库同步确认**：执行 `deploy.sh` 后观察终端日志，确保两个远程仓库均成功推送。
