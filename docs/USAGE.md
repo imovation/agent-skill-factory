@@ -18,14 +18,13 @@ GITHUB_USER=你的GitHub用户名
 4.  **放置占位符**：在 `.tpl` 文件中，在你希望显示脚本重建指令的地方放入 `{{RECONSTRUCT_ASSETS}}`。
 
 ## 4. 执行进化逻辑 (The Evolution Loop)
-当你在当前会话中解决了一个问题，且用户已验证有效：
-1.  **更新源码**：在 `projects/<项目名>/src/SKILL.md.tpl` 中整合新知识。
-2.  **记录历史**：在 `projects/<项目名>/meta/CHANGELOG.md` 中记录本次进化的元数据（日期、AI模型名、变更内容）。
-3.  **构建与发布**：
+工厂推荐使用一键进化脚本，它会自动处理构建、检查及预览：
+1.  **启动进化**：
     ```bash
-    cd /home/imovation/agent-skill-factory
-    ./core/deploy.sh <项目名>
+    ./core/evolve.sh <项目名>
     ```
+2.  **自动预览**：脚本会自动输出成品内容，AI Agent 会将其展示在聊天窗口中。
+3.  **人工确认**：在 OpenCode 中告知 AI “确认部署”，AI 将运行 `./core/deploy.sh <项目名>` 完成发布。
 
 ## 5. IDE 辅助工具 (IDE Utilities)
 工厂提供了一套 CLI 辅助工具来提升开发体验：
