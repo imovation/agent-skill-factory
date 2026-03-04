@@ -1,0 +1,20 @@
+{
+    "project_name": "ubuntu-ai-assistant",
+    "validation_probes": [
+        {
+            "name": "RDP Display Connection",
+            "command": "DISPLAY=:1 xprop -root > /dev/null",
+            "critical": true
+        },
+        {
+            "name": "Clipboard Tool Availability",
+            "command": "which xclip && which xsel",
+            "critical": true
+        },
+        {
+            "name": "Bridge Process Status",
+            "command": "ps aux | grep rdp-clipboard-bridge.py | grep -v grep",
+            "critical": false
+        }
+    ]
+}
