@@ -4,9 +4,9 @@
 
 ## 📖 文档体系 (Documentation)
 - **[核心铁律 (CORE_LAWS)](.spec/CORE_LAWS.md)**: 遵循“禁止瞎猜 + 必须建议”的最高准则。
-- **[需求文档 (PRD)](docs/PRD.md)**: 项目愿景与需求分析。
-- **[技术方案 (TDD)](docs/TDD.md)**: 编译器与部署器架构设计。
-- **[使用说明 (USAGE)](docs/USAGE.md)**: 如何创建新技能及执行进化。
+- **[需求文档 (PRD)](.spec/docs/PRD.md)**: 项目愿景与需求分析。
+- **[技术方案 (TDD)](.spec/docs/TDD.md)**: 编译器与部署器架构设计。
+- **[使用说明 (USAGE)](.spec/docs/USAGE.md)**: 如何创建新技能及执行进化。
 
 ## 🏗️ 目录结构 (Structure)
 - **`core/`**: 核心编译器 (`build.sh`) 与部署器 (`deploy.sh`)。
