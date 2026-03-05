@@ -13,7 +13,7 @@ GITHUB_USER=你的GitHub用户名
 
 ## 3. 开发一个新技能 (Developing a New Skill)
 1.  **初始化**：在 `projects/` 下创建一个以技能命名的文件夹。
-2.  **创建源码**：在 `projects/<项目名>/src/` 下创建 `SKILL.md.tpl`。
+2.  **创建源码**：在 `projects/<项目名>/.spec/` 下创建 `SKILL.md.tpl`。
 3.  **注入代码 (可选)**：如果技能依赖 Python 或 Shell 脚本，请放在 `projects/<项目名>/assets/` 下。
 4.  **放置占位符**：在 `.tpl` 文件中，在你希望显示脚本重建指令的地方放入 `{{RECONSTRUCT_ASSETS}}`。
 

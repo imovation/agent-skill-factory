@@ -3,7 +3,7 @@
 ## 1. 架构总览 (System Overview)
 系统采用“源码-编译-发布”三层解耦架构。
 
-- **源码层 (Source Layer)**：`projects/*/src/SKILL.md.tpl` 和 `projects/*/assets/`。
+- **源码层 (Source Layer)**：`projects/*/.spec/SKILL.md.tpl` 和 `projects/*/assets/`。
 - **核心逻辑层 (Core Logic)**：`core/build.sh` 和 `core/deploy.sh`。
 - **发布层 (Release Layer)**：生成的成品 `SKILL.md`（推送到 `skills` 仓库）。
 

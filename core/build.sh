@@ -8,7 +8,7 @@ if [ -z "$PROJECT_NAME" ]; then
 fi
 
 PROJECT_DIR="/home/imovation/agent-skill-factory/projects/$PROJECT_NAME"
-TEMPLATE_FILE="$PROJECT_DIR/src/SKILL.md.tpl"
+TEMPLATE_FILE="$PROJECT_DIR/.spec/SKILL.md.tpl"
 OUTPUT_FILE="$PROJECT_DIR/SKILL.md"
 
 if [ ! -f "$TEMPLATE_FILE" ]; then

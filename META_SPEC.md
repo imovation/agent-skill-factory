@@ -1,12 +1,12 @@
 # AI 原生开发元规范 (Meta Spec) —— 规范驱动编程 (Spec Coding) 范式
 
-**版本**：1.1 (Gemini Optimized)
+**版本**：1.2 (Decoupled Edition)
 **核心哲学**：意图即主权，实现即瞬态。
 
 ---
 
 ## 一、 核心逻辑 (Core Philosophy)
-在 AI 原生开发环境下，软件开发的本质从“编写语法”升维至“定义语义”：
+在 AI 原生开发环境下，软件开发的本质 grass 从“编写语法”升维至“定义语义”：
 - **文档即代码**：规范（Spec）不再是过期的注释，而是最高等级的源代码。
 - **逻辑即架构**：系统的稳定性不取决于代码的堆砌，而取决于逻辑约束的严密性。
 
@@ -16,13 +16,15 @@
 - **本质**：系统的“单一事实来源（SSOT）”。
 - **人类主权**：人类是规范的唯一最终决策者。AI 负责提供提案，人类负责定案。
 - **溯源一致性 (Traceability)**：严禁在代码层进行手动修改。任何变更必须回溯至 Spec。
-- **工厂映射 (SSOT Mapping)**：在 `agent-skill-factory` 中，`projects/*/src/SKILL.md.tpl` 是最高级别的 Spec 实体，它是定义 Agent 行为的**立法文件**。
+- **物理隔离 (Physical Decoupling)**：在项目根目录中创建 `.spec/` 目录，项目中所有的 Spec 必须存放在该目录下，实现规范与代码的物理级完全解耦。
+- **工厂映射 (SSOT Mapping)**：在 `agent-skill-factory` 中，`projects/*/.spec/*.tpl` 是最高级别的 Spec 实体，它是定义 Agent 行为的**立法文件**。
 
 ### 2. 代码 (Code)：瞬态的实现 (Transient Implementation)
-- **本质**：意图在特定技术栈下的“投影”，是可丢弃、可再生的中间产物。
+- **本质**：意图在特定技术栈下的“折叠”和“投影”，是可丢弃、可再生的中间产物。
 - **AI 所有权**：AI 是代码编写与逻辑验证的第一负责人。
 - **单向投影 (One-way Projection)**：从 Spec 到 Code 的转换必须是自动、幂等且单向的。
 - **工厂映射 (Code Mapping)**：在 `agent-skill-factory` 中，`projects/*/assets/` 下的所有物理脚本，以及通过编译器生成的成品 `SKILL.md`，均被视为瞬态投影，它们的作用仅仅是实现 `.tpl` 的语义。
+
 
 ## 三、 双轮驱动架构 (Dual-Wheel Drive)
 
@@ -49,7 +51,7 @@
 
 ## 五、 反模式与红线 (Anti-Patterns & Red Lines)
 为了捍卫 Spec Coding 的纯洁性，所有参与工厂开发的开发者（人类与 AI）必须遵守以下绝对红线：
-1. **篡改投影 (Tampering)**：严禁手动修改生成的成品 `SKILL.md` 或直接将补丁推入 `skills` 分发仓库。所有变更必须发生在 `projects/*/src/`，并通过 `core/evolve.sh` 重新投影。
+1. **篡改投影 (Tampering)**：严禁手动修改生成的成品 `SKILL.md` 或直接将补丁推入 `skills` 分发仓库。所有变更必须发生在 `projects/*/.spec/`，并通过 `core/evolve.sh` 重新投影。
 2. **模糊语义 (Ambiguity)**：规范中严禁出现“大概”、“可能”等模糊词汇。Spec 必须是对 Agent 具有确定性指导意义的高密度指令。
 3. **脱离上下文补丁 (Context-Blind Patching)**：严禁 AI 在未完全阅读并理解 `.tpl` 全局逻辑的情况下提供局部代码补丁。若发现冲突，必须先更新全局规范。
 
