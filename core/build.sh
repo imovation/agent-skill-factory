@@ -3,7 +3,7 @@
 
 PROJECT_NAME=$1
 if [ -z "$PROJECT_NAME" ]; then
-    echo "[ERROR] Please specify a project name (e.g., ./build.sh ubuntu-ai-assistant)"
+    echo "[ERROR] Please specify a project name (e.g., ./build.sh ubuntu-tutor)"
     exit 1
 fi
 

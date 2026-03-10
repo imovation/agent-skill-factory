@@ -10,7 +10,7 @@
 
 ## 🏗️ 目录结构 (Structure)
 - **`core/`**: 核心编译器 (`build.sh`) 与部署器 (`deploy.sh`)。
-- **`projects/`**: 各项技能的源码工程 (如 `ubuntu-ai-assistant`)。
+- **`projects/`**: 各项技能的源码工程 (如 `ubuntu-tutor`)。
 - **`config/`**: 全局配置。
 - **`templates/`**: 标准化 Skill 模板。
 

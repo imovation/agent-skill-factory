@@ -1,5 +1,5 @@
 {
-    "project_name": "ubuntu-ai-assistant",
+    "project_name": "ubuntu-tutor",
     "validation_probes": [
         {
             "name": "RDP Display Connection",
